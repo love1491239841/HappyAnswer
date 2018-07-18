@@ -1,4 +1,4 @@
-package com.example.administrator.happyanswer;
+package com.example.administrator.happyanswer.activity;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -11,6 +11,7 @@ import android.widget.FrameLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.administrator.happyanswer.R;
 import com.example.administrator.happyanswer.adapter.MainViewPagerAdapter;
 import com.example.administrator.happyanswer.fragment.HomeFragment;
 import com.example.administrator.happyanswer.fragment.UserFragment;

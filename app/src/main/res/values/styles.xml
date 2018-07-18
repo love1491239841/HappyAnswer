@@ -7,5 +7,10 @@
         <item name="colorPrimaryDark">#3DC7BE</item>
         <item name="colorAccent">#3DC7BE</item>
     </style>
-
+    <style name="AppNoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#3DC7BE</item>
+        <item name="colorPrimaryDark">#3DC7BE</item>
+        <item name="colorAccent">#3DC7BE</item>
+    </style>
 </resources>
