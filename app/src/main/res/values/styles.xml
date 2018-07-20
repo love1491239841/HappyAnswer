@@ -13,4 +13,6 @@
         <item name="colorPrimaryDark">#3DC7BE</item>
         <item name="colorAccent">#3DC7BE</item>
     </style>
+    <style name="MainTheme" parent="AppNoActionBar">
+    </style>
 </resources>

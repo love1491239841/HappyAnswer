@@ -29,8 +29,12 @@
         <activity android:name=".activity.UserSettingActivity" />
         <activity
             android:name=".activity.AnswerActivity"
-            android:theme="@style/AppNoActionBar"></activity>
-        <activity android:name=".activity.UserinfoActivity"></activity>
+            android:theme="@style/AppNoActionBar" />
+        <activity android:name=".activity.UserinfoActivity" />
+        <activity
+            android:name=".activity.NewsActivity"
+            android:theme="@style/MainTheme"></activity>
+        <activity android:name=".activity.RecordActivity"></activity>
     </application>
 
 </manifest>

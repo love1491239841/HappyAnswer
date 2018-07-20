@@ -19,6 +19,7 @@ import com.example.administrator.happyanswer.R;
 import com.example.administrator.happyanswer.activity.AnswerActivity;
 import com.example.administrator.happyanswer.activity.LoginActivity;
 import com.example.administrator.happyanswer.activity.MainActivity;
+import com.example.administrator.happyanswer.activity.RecordActivity;
 import com.example.administrator.happyanswer.adapter.NewsAdapter;
 import com.example.administrator.happyanswer.utils.Constants;
 import com.example.administrator.happyanswer.utils.JsonGet;
@@ -30,7 +31,7 @@ import okhttp3.Call;
 import okhttp3.Response;
 
 public class HomeFragment extends Fragment implements View.OnClickListener{
-    private Button home_ks;
+    private Button home_ks,home_jl;
     private RecyclerView recyclerView;
     private NewsAdapter newsAdapter;
     private LinearLayoutManager linearLayoutManager;
@@ -52,7 +53,10 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
     private void initView(){
         home_ks= (Button) getActivity().findViewById(R.id.home_ks);
         home_ks.setOnClickListener(this);
+        home_jl= (Button) getActivity().findViewById(R.id.home_jl);
+        home_jl.setOnClickListener(this);
         recyclerView=getActivity().findViewById(R.id.home_recycler);
+        recyclerView.setNestedScrollingEnabled(false);
         linearLayoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(linearLayoutManager);
         initdata();
@@ -99,6 +103,10 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
             case R.id.home_ks:
                 Intent intent = new Intent(getActivity(), AnswerActivity.class);
                 startActivity(intent);
+                break;
+            case R.id.home_jl:
+                Intent intent1 = new Intent(getActivity(), RecordActivity.class);
+                startActivity(intent1);
                 break;
         }
     }

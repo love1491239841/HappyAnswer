@@ -1,5 +1,6 @@
 package com.example.administrator.happyanswer.adapter;
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,7 +10,10 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.administrator.happyanswer.R;
+import com.example.administrator.happyanswer.activity.NewsActivity;
 import com.example.administrator.happyanswer.bean.News;
+import com.example.administrator.happyanswer.utils.Constants;
+
 import java.util.List;
 
 /**
@@ -50,15 +54,16 @@ public class NewsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, final int position) {
-        String url = "http://192.168.43.144:8000/static/images/";
-        News news = NewsList.get(position);
+        final News news = NewsList.get(position);
         ((NewsHolder)holder).News_item_name.setText(news.getTitle());
         ((NewsHolder)holder).News_item_time.setText(news.getTime());
-        Glide.with(context).load(url+news.getImg()).into(((NewsHolder)holder).News_item_img);
+        Glide.with(context).load(Constants.NEWSIMG_URL+news.getImg()).into(((NewsHolder)holder).News_item_img);
         ((NewsHolder)holder).view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(context, NewsActivity.class);
+                intent.putExtra("news",news);
+                context.startActivity(intent);
             }
         });
 
