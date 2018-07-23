@@ -36,18 +36,20 @@ public class AnswerActivity extends AppCompatActivity implements View.OnClickLis
     private Title titles;
     private String theanswer;
     private String username;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_answer);
+        setFinishOnTouchOutside(false);
         if (Build.VERSION.SDK_INT >= 21) {
             View decorView = getWindow().getDecorView();
             decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN | View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
             getWindow().setStatusBarColor(Color.TRANSPARENT);
         }
+
         SharedPreferences sharedPreferences = getSharedPreferences("data",MODE_PRIVATE);
         username = sharedPreferences.getString("name","");
+
         initView();
         initdata();
     }
@@ -57,6 +59,7 @@ public class AnswerActivity extends AppCompatActivity implements View.OnClickLis
         time=findViewById(R.id.answer_time);
         idch=findViewById(R.id.answer_idch);
         title=findViewById(R.id.answer_title);
+        name.setText(username);
         optionsa=findViewById(R.id.answer_optionsa);
         optionsb=findViewById(R.id.answer_optionsb);
         optionsc=findViewById(R.id.answer_optionsc);
@@ -95,23 +98,24 @@ public class AnswerActivity extends AppCompatActivity implements View.OnClickLis
                     ok.setText("已经连续答对"+number+"题");
                 }else {
                     ifStop=false;
-                    new AlertDialog.Builder(this)
-                            .setTitle("答题结束")
-                            .setMessage("正确答案是"+theanswer )
-                            .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                    AlertDialog.Builder builder =new AlertDialog.Builder(this);
+                    builder.setCancelable(false);
+                    builder.setTitle("答题结束");
+                    builder.setMessage("正确答案是"+theanswer );
+                    builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialogInterface, int i) {
                                     setinitData();
                                     finish();
                                 }
-                            })
-                            .setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                            });
+                    builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialogInterface, int i) {
                                     finish();
                                 }
-                            })
-                            .show();
+                            });
+                    builder.show();
                 }
                 break;
             case R.id.answer_optionsb:
@@ -123,23 +127,24 @@ public class AnswerActivity extends AppCompatActivity implements View.OnClickLis
                     ok.setText("已经连续答对"+number+"题");
                 }else {
                     ifStop=false;
-                    new AlertDialog.Builder(this)
-                            .setTitle("答题结束")
-                            .setMessage("正确答案是"+theanswer )
-                            .setPositiveButton("确定", new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialogInterface, int i) {
-                                    setinitData();
-                                    finish();
-                                }
-                            })
-                            .setNegativeButton("取消", new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialogInterface, int i) {
-                                    finish();
-                                }
-                            })
-                            .show();
+                    AlertDialog.Builder builder =new AlertDialog.Builder(this);
+                    builder.setCancelable(false);
+                    builder.setTitle("答题结束");
+                    builder.setMessage("正确答案是"+theanswer );
+                    builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            setinitData();
+                            finish();
+                        }
+                    });
+                    builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            finish();
+                        }
+                    });
+                    builder.show();
                 }
                 break;
             case R.id.answer_optionsc:
@@ -151,23 +156,24 @@ public class AnswerActivity extends AppCompatActivity implements View.OnClickLis
                     ok.setText("已经连续答对"+number+"题");
                 }else {
                     ifStop=false;
-                    new AlertDialog.Builder(this)
-                            .setTitle("答题结束")
-                            .setMessage("正确答案是"+theanswer )
-                            .setPositiveButton("确定", new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialogInterface, int i) {
-                                    setinitData();
-                                    finish();
-                                }
-                            })
-                            .setNegativeButton("取消", new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialogInterface, int i) {
-                                    finish();
-                                }
-                            })
-                            .show();
+                    AlertDialog.Builder builder =new AlertDialog.Builder(this);
+                    builder.setCancelable(false);
+                    builder.setTitle("答题结束");
+                    builder.setMessage("正确答案是"+theanswer );
+                    builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            setinitData();
+                            finish();
+                        }
+                    });
+                    builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            finish();
+                        }
+                    });
+                    builder.show();
                 }
                 break;
             case R.id.answer_optionsd:
@@ -179,24 +185,24 @@ public class AnswerActivity extends AppCompatActivity implements View.OnClickLis
                     ok.setText("已经连续答对"+number+"题");
                 }else {
                     ifStop=false;
-                    new AlertDialog.Builder(this)
-                            .setTitle("答题结束")
-                            .setMessage("正确答案是"+theanswer )
-                            .setPositiveButton("确定", new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialogInterface, int i) {
-                                    setinitData();
-                                    finish();
-                                }
-                            })
-                            .setNegativeButton("取消", new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialogInterface, int i) {
-                                    finish();
-                                }
-                            })
-                            .show();
-                    finish();
+                    AlertDialog.Builder builder =new AlertDialog.Builder(this);
+                    builder.setCancelable(false);
+                    builder.setTitle("答题结束");
+                    builder.setMessage("正确答案是"+theanswer );
+                    builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            setinitData();
+                            finish();
+                        }
+                    });
+                    builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            finish();
+                        }
+                    });
+                    builder.show();
                 }
                 break;
         }
@@ -210,24 +216,26 @@ public class AnswerActivity extends AppCompatActivity implements View.OnClickLis
             switch (msg.arg1){
                 case 0:
                     ifStop=false;
-                    new AlertDialog.Builder(AnswerActivity.this)
-                            .setTitle("答题结束")
-                            .setMessage("是否保存本次数据" )
-                            .setPositiveButton("确定", new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialogInterface, int i) {
-                                    setinitData();
-                                    finish();
-                                }
-                            })
-                            .setNegativeButton("取消", new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialogInterface, int i) {
-                                    finish();
-                                }
-                            })
-                            .show();
+                    AlertDialog.Builder builder =new AlertDialog.Builder(AnswerActivity.this);
+                    builder.setCancelable(false);
+                    builder.setTitle("答题结束");
+                    builder.setMessage("正确答案是"+theanswer );
+                    builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            setinitData();
+                            finish();
+                        }
+                    });
+                    builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            finish();
+                        }
+                    });
+                    builder.show();
                     break;
+
             }
         }
     };

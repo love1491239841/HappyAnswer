@@ -8,6 +8,6 @@ public class Constants {
     public final static String Answer_URL = URL+"title";
     public final static String SETAnswer_URL = URL+"setRecord";
     public final static String Record_URL = URL+"getRecord";
+    public final static String PASSWORD_URL = URL+"newpassword";
     public final static String NEWSIMG_URL = "http://192.168.43.144:8000/static/images/";
-
 }

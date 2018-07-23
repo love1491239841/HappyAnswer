@@ -4,35 +4,54 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-
     <LinearLayout
-        android:id="@+id/fmuser_user"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:orientation="horizontal"
-        android:clickable="true">
-        <ImageView
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_gravity="center"
-            android:layout_marginLeft="30dp"
-            android:src="@mipmap/user_yh"/>
-        <TextView
+        android:layout_height="140dp"
+        android:orientation="vertical"
+        android:background="@drawable/toolbar_shape">
+        <View
             android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:layout_marginRight="55dp"
-            android:text="用户信息"
-            android:textSize="15dp"
-            android:textColor="#393939"/>
+            android:layout_height="25dp"/>
+        <LinearLayout
+            android:id="@+id/fmuser_user"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal"
+            android:clickable="true">
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="16dp"
+                android:src="@mipmap/user_yh"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+                <TextView
+                    android:id="@+id/user_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="16dp"
+                    android:text="用户信息"
+                    android:textSize="18dp"
+                    android:textColor="#ffffff"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="10dp"
+                    android:text="这个让人很懒什么都没留下"
+                    android:textSize="15dp"
+                    android:textColor="#ffffff"/>
+
+            </LinearLayout>
+        </LinearLayout>
     </LinearLayout>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="20dp"
-        android:background="#EAEAEA"/>
     <LinearLayout
-        android:id="@+id/fmuser_task"
+        android:id="@+id/user_rules"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:orientation="horizontal"

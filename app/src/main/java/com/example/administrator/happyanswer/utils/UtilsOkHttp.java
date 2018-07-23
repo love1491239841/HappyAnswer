@@ -49,4 +49,17 @@ public class UtilsOkHttp {
                 .build();
         client.newCall(request).enqueue(callback);
     }
+    public static void sendpasswordOkHttpRequest(String name,String newpassword,String twopassword,final String address, final okhttp3.Callback callback) {
+        OkHttpClient client = new OkHttpClient();
+        RequestBody requestBody = new FormBody.Builder()
+                .add("username",name)
+                .add("newpassword",newpassword)
+                .add("twopassword",twopassword)
+                .build();
+        Request request = new Request.Builder()
+                .url(address)
+                .post(requestBody)
+                .build();
+        client.newCall(request).enqueue(callback);
+    }
 }

@@ -1,8 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#FFFFFF">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="游戏规则："
+        android:textSize="25dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        />
+    <TextView
+        android:layout_marginLeft="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="每题规定时间（10秒），"
+        android:layout_gravity="center"
+        android:textSize="25dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="答对，进入下一题；"
+        android:layout_gravity="center"
 
+        android:textSize="25dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="答错，退出本次答题。"
+        android:layout_gravity="center"
+        android:textSize="25dp"
+        android:layout_marginLeft="8dp"/>
+
+    <TextView
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="游戏介绍："
+        android:layout_gravity="center"
+        android:textSize="25dp"/>
+    <TextView
+        android:textSize="18dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="      1.    本应用适合全年龄段玩家，如果您识字不全，知识不够，手速慢，反应慢，老花眼，脾气差等影响游戏体验的因素，建议您放弃这个问答，以免造成不必要的损失，比如摔手机，恶言恶语等伤害他人财产及心灵等行为，若出现此情况，本游戏一概不负责任！"/>
+
+    <TextView
+        android:textSize="18dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="      2.     本应用为答题考验类应用，目的在于挑战您的知识储备，并扩充您的知识储备"/>
+    <TextView
+        android:textSize="18dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="     3.     本应用由第一小组的人员开发，第一次做应用，希望大家都能给予好评。"/>
 </LinearLayout>
