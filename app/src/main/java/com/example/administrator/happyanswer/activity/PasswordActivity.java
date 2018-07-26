@@ -70,7 +70,6 @@ public class PasswordActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.password_menu_tj:
-                Toast.makeText(this, "呵呵呵", Toast.LENGTH_SHORT).show();
                 if (initData()){
                     okhttp();
                 }
